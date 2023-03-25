@@ -6,9 +6,6 @@ export default class ErrorRepository {
   }
 
   translate(code) {
-    if (this.repo.has(code)) {
-      return this.repo.get(code);
-    }
-    return 'Unknown error';
+    return this.repo.has(code) ? this.repo.get(code) : 'Unknown error';
   }
 }
